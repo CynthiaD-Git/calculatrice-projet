@@ -1,0 +1,22 @@
+<div class="calculatrice-container">
+<h2>Calculatrice</h2>
+  
+  <p>Essayez d'effectuer vos divisions, additions, soustractions et multiplications!</p>
+
+    <form [formGroup]="form" (ngSubmit)="calculer()" class="form-style">
+        <input type="number" formControlName="nombre1" placeholder="Nombre 1"/>
+
+            <select id="" formControlName="operateur">
+              @for (item of operateur; track item) {
+              <option [value]="item">{{ item }}</option>
+              }
+            </select>
+          
+      
+      <input type="number" formControlName="nombre2" placeholder="nombre2" />
+        <button type="submit">Calculer</button>
+      </form>
+      
+        <div class="resultat">Résultat : {{ result }}</div>
+
+    </div>
